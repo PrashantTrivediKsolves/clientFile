@@ -1,0 +1,28 @@
+<!-- <p>signup works!</p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form  #formVal="ngForm" (ngSubmit)="signUpUser(formVal.value)">
+    <input type="text" placeholder="Enter name" name="username" ngModel>
+    <br>
+    <br>
+    <input type="email" placeholder="Enter Email" name="email" ngModel>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter password" name="password" ngModel>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter role of user" name="role" ngModel>
+    <br>
+    <br>
+    <button>submit</button>
+  </form>
+
+</body>
+</html>

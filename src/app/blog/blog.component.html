@@ -1,0 +1,20 @@
+<p>blog works!</p>
+
+<div>
+  <div>
+    <form #formval="ngForm" (ngSubmit)="postBlog(formval.value)">
+      <input type="text" placeholder="Enter the postId" name="postId" ngModel>
+      <br>
+      <br>
+      <input type="text" placeholder="Enter the username" name="username" ngModel>
+      <br>
+      <br>
+      <button>postBlog</button>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<button (click)="getblog()">getAllBlogs</button>
+
+{{AllBlogs|json}}
