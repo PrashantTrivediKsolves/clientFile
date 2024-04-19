@@ -1,7 +1,7 @@
-<p>blog works!</p>
+<p>pending blog works!</p>
 <div>
   <div>
-    <form #formval="ngForm" (ngSubmit)="postBlog(formval.value)">
+    <form #formval="ngForm" (ngSubmit)="postPendingBlog(formval.value)">
       <input type="text" placeholder="Enter the postId" name="postId" ngModel>
       <br>
       <br>
@@ -17,6 +17,7 @@
 </div>
 <br>
 <br>
-<button (click)="getblog()">getAllBlogs</button>
+<!-- <button (click)="getblog()">getAllBlogs</button>
 
-{{AllBlogs|json}}
+{{AllBlogs|json}} -->
+

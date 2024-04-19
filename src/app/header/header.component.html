@@ -1,1 +1,9 @@
-<p>header works!</p>
+<!-- <p>header works!</p> -->
+<br>
+<br>
+<input type="text" [(ngModel)]="query" (input)="search()" placeholder="Search by title...">
+
+  <li *ngFor="let result of results">
+    <h3>{{ result.postId }}</h3>
+    <p>{{ result.title }}</p>
+  </li>

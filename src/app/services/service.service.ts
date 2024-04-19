@@ -36,16 +36,19 @@ export class ServiceService {
         console.log("User signin success full");
         let token=res.token;
         // this.router.navigate(['my-blog']);
+
         const decoded = this.getdecode(token);
+
         console.log(decoded.role);
+
         if(decoded.role==='user')
         {
-          this.router.navigate(['header']);
+          this.router.navigate(['navbarUser']);
         }
         else if(decoded.role==='admin')
-          {
-            this.router.navigate(['home']);
-          }
+        {
+          this.router.navigate(['navbarAdmin']);
+        }
       },
       (error) => {
         console.log('Login failed:', error);

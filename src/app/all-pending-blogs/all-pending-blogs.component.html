@@ -1,0 +1,24 @@
+<p>all-pending-blogs works!</p>
+<br>
+<br>
+<!-- {{pendingBlogs|json}} -->
+<button (click)="pendingBlog()">All pending blogs</button>
+<br>
+<br>
+<br>
+<div *ngFor="let pending of pendingBlogs">
+  <div class="container" style="background-color: blueviolet; width: 25%; height: 200px;">
+    <h1>{{pending.postId}}</h1>
+    <p>{{pending.title}}</p>
+    <p>{{pending.content}}</p>
+
+    <!-- <a [routerLink]="'/add-blog/' + pending.postId" class="btn btn-primary" style="margin: 3px;">Approved </a> -->
+    <button class="btn btn-danger" (click)="getpendingBlogById(pending.postId)"style="margin: 3px;" >Approve-Blog</button>
+
+    <button class="btn btn-danger" (click)="DeleteBlog(pending.postId)"style="margin: 3px;" >Delete-Blog</button>
+  </div>
+</div>
+
+
+
+
