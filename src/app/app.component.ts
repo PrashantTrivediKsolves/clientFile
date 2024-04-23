@@ -1,8 +1,11 @@
 import { Component, ViewChild,ElementRef } from '@angular/core';
 
 import { Observable, fromEvent ,Subscription, Subject} from 'rxjs';
+
 import {ajax} from 'rxjs/ajax';
+
 import {map,filter,tap, switchMap, debounceTime,shareReplay,share} from 'rxjs/operators'
+
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
@@ -28,11 +31,11 @@ export class AppComponent {
   //   // const searchObs=fromEvent(this.search!.nativeElement,"input").pipe(
   //   //   map((e:any)=>
   //   //     {
-  //   //     return ajax(`https://api.github.com/search/user?q=${e.target.value}`)
+  //   //         return ajax(`https://api.github.com/search/user?q=${e.target.value}`)
   //   //     }
   //   //   )
   //   // )
-  //   const searchObs=fromEvent(this.search!.nativeElement,"input").pipe(
+  //     const searchObs=fromEvent(this.search!.nativeElement,"input").pipe(
   //     debounceTime(1000),
   //     filter((e:any)=>e.target.value!=""),
   //     switchMap((e:any)=>
@@ -52,14 +55,16 @@ export class AppComponent {
   //   //   //console.log(value.target.value);
   //   // })
 
-  //   // observable..=> pizzawho emits the data.....
-  //  const pizzaObsevabe= new Observable((subscriber)=>
+  //   // obserable..=> pizza who emits the data.....
+
+  //  const pizzaObservabe= new Observable((subscriber)=>
   //   {
   //     console.log("inside observable");
   //     subscriber.next({name:"Farm House",veg:true,size:"small"})
   //     // subscriber.next({name:"Margherita",veg:true,size:"large"})
   //     // subscriber.next({name:"Barbecue chicken",veg:false,size:"medium"})
   //     subscriber.complete();
+
   //   }).pipe(
   //     tap((pizza:any)=>{
   //       console.log("inside pipe");
